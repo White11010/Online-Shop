@@ -1,27 +1,17 @@
 <template>
     <div class="os-main-wrapper">
-        <p>{{title}}</p>
-        <os-catalog/>
-        <os-cart 
-            v-if="CART.length"
-            :cart_data="CART"
-        />
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
+
     </div>
 </template>
 
 <script>
-import OsCart from './os-cart.vue'
-import OsCatalog from './os-catalog.vue'
-import {mapGetters} from 'vuex'
-
 
     export default {
         name: 'os-main-wrapper',
-        components: {
-            OsCatalog,
-            OsCart
 
-        },
         props: {},
         data() {
             return {
@@ -29,9 +19,7 @@ import {mapGetters} from 'vuex'
             }
         },
         computed: {
-            ...mapGetters([
-                'CART'
-            ])
+
         },
         methods: {},
         watch: {},
