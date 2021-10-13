@@ -1,8 +1,5 @@
 <template>
     <div class="os-cart">
-        <router-link :to="{name: 'catalog'}">
-            <div class="os-catalog__link_to_cart">Back to catalog</div>
-        </router-link>
         <os-cart-item
             v-for="(item, index) in CART"
             :key="item.article"
@@ -46,5 +43,6 @@
 <style>
     .os-cart{
         width: 100%;
+        margin-top: 60px;
     }
 </style>

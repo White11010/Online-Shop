@@ -36,10 +36,15 @@ export default {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        flex-basis: 30%;
+        flex: 0  auto;
+        
+        /* flex-basis: 30%; */
         /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
         box-shadow: 0 0 8px 0 #8a8a8a00;
-        margin: 8px;
+        margin: 0;
+        padding: 70px 20px 0;
+        box-sizing: border-box;
+        width: 25%;
     }
 
 </style>

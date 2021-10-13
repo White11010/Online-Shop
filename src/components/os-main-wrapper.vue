@@ -1,5 +1,6 @@
 <template>
     <div class="os-main-wrapper">
+        <os-header/>
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
@@ -8,10 +9,13 @@
 </template>
 
 <script>
+    import osHeader from './os-header.vue'
 
     export default {
         name: 'os-main-wrapper',
-
+        components: {
+            osHeader,
+        },
         props: {},
         data() {
             return {
@@ -33,7 +37,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 900px;
+        /* max-width: 900px; */
         margin: 0 auto;
     }
 </style>

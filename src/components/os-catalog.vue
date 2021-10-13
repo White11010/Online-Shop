@@ -1,8 +1,8 @@
 <template>
     <div class="os-catalog"> 
-        <router-link :to="{name: 'cart'}">
+        <!-- <router-link :to="{name: 'cart'}">
             <div class="os-catalog__link_to_cart">Cart: {{CART.length}}</div>
-        </router-link>
+        </router-link> -->
         <os-catalog-item
             v-for="product in PRODUCTS"
             :key="product.article"
@@ -29,7 +29,7 @@
                 'PRODUCTS',
                 'CART'
             ]),
-            
+
         },
         methods: {
             ...mapActions([
@@ -51,7 +51,8 @@
     .os-catalog{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: start;
+        margin-top: 60px;
     }
     
 </style>
