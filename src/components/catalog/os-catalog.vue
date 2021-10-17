@@ -1,8 +1,8 @@
 <template>
     <div class="os-catalog"> 
-        <!-- <router-link :to="{name: 'cart'}">
-            <div class="os-catalog__link_to_cart">Cart: {{CART.length}}</div>
-        </router-link> -->
+        <os-filter-menu
+            :itemFilters="itemFilters"
+        />
         <os-catalog-item
             v-for="product in PRODUCTS"
             :key="product.article"
@@ -14,15 +14,23 @@
 </template>
 
 <script>    
-    import osCatalogItem from './os-catalog-item.vue'
+    import osCatalogItem from '../catalog/os-catalog-item.vue'
+    import osFilterMenu from './os-filter-menu.vue'
     import {mapActions, mapGetters} from 'vuex'
 
     export default {
         name: 'os-catalog',
-
         components: {
-            osCatalogItem
-
+            osCatalogItem,
+            osFilterMenu
+        },
+        data() {
+            return {
+                itemFilters: [
+                    {type: 'clothes', categories: [{name: 'T-shirt', id: 1}, {name: 'Hoodie', id: 2}, { name: 'Longsleeve', id: 3}], id: 1},
+                    {type: 'accessories', categories: [{ name: 'Jewelery', id: 1}, { name: 'Bags', id: 2}], id: 2}
+                ],
+            }
         },
         computed: {
             ...mapGetters([

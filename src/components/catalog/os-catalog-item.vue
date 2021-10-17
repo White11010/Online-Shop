@@ -1,6 +1,6 @@
 <template>
     <div class="os-catalog-item">
-        <img class="os-catalog-item__pic" :src=" require('../assets/images/' + product_data.image) " alt="img">
+        <img class="os-catalog-item__pic" :src=" require('../../assets/images/' + product_data.image) " alt="img">
         <p class="os-catalog-item__name">{{product_data.name}}</p>
         <p class="os-catalog-item__price">Price: {{product_data.price}} руб.</p>
         <button 
@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
     .os-catalog-item{
         display: flex;
         flex-direction: column;
@@ -45,6 +45,16 @@ export default {
         padding: 70px 20px 0;
         box-sizing: border-box;
         width: 25%;
+        // min-width: 300px;
+        
+
+        &__img {
+            
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
     }
 
 </style>

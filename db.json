@@ -6,7 +6,8 @@
       "price": 2100,
       "article": "T1",
       "available": true,
-      "category": "Мужские",
+      "category": "T-shirt",
+      "type": "Clothes",
       "quantity": 1
     },
     {
@@ -15,7 +16,8 @@
       "price": 315,
       "article": "T2",
       "available": true,
-      "category": "Женские",
+      "category": "Bags",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -24,7 +26,8 @@
       "price": 100,
       "article": "T3",
       "available": false,
-      "category": "Женские",
+      "category": "Bags",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -34,6 +37,7 @@
       "article": "T4",
       "available": true,
       "category": "Мужские",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -42,7 +46,8 @@
       "price": 65,
       "article": "T5",
       "available": false,
-      "category": "Женские",
+      "category": "T-shirt",
+      "type": "Clothes",
       "quantity": 1
     },
     {
@@ -51,7 +56,8 @@
       "price": 87,
       "article": "T6",
       "available": true,
-      "category": "Женские",
+      "category": "Jewelery",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -60,7 +66,8 @@
       "price": 2100,
       "article": "T1",
       "available": true,
-      "category": "Мужские",
+      "category": "T-shirt",
+      "type": "Clothes",
       "quantity": 1
     },
     {
@@ -69,7 +76,8 @@
       "price": 315,
       "article": "T2",
       "available": true,
-      "category": "Женские",
+      "category": "Jewelery",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -78,7 +86,8 @@
       "price": 100,
       "article": "T3",
       "available": false,
-      "category": "Женские",
+      "category": "Hoodie",
+      "type": "Clothes",
       "quantity": 1
     },
     {
@@ -87,7 +96,8 @@
       "price": 53,
       "article": "T4",
       "available": true,
-      "category": "Мужские",
+      "category": "Jewelery",
+      "type": "Accessories",
       "quantity": 1
     },
     {
@@ -96,7 +106,38 @@
       "price": 65,
       "article": "T5",
       "available": false,
-      "category": "Женские",
+      "category": "Hoodie",
+      "type": "Clothes",
+      "quantity": 1
+    },
+    {
+      "image": "3.jpg",
+      "name": "T-shirt 3",
+      "price": 100,
+      "article": "T3",
+      "available": false,
+      "category": "Longsleeve",
+      "type": "Clothes",
+      "quantity": 1
+    },
+    {
+      "image": "4.jpg",
+      "name": "T-shirt 4",
+      "price": 53,
+      "article": "T4",
+      "available": true,
+      "category": "JeLongsleeve",
+      "type": "Clothes",
+      "quantity": 1
+    },
+    {
+      "image": "5.jpg",
+      "name": "T-shirt 5",
+      "price": 65,
+      "article": "T5",
+      "available": false,
+      "category": "Longsleeve",
+      "type": "Clothes",
       "quantity": 1
     }
   ]

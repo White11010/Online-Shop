@@ -1,6 +1,14 @@
 @import "./variables.scss";
 
-
+@font-face {
+	font-family: 'HelveticaNeueCyr-Medium';
+	src: url('`@fonts/helveticaneuecyr-medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('`@fonts/helveticaneuecyr-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('`@fonts/helveticaneuecyr-medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('`@fonts/helveticaneuecyr-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('`@fonts/helveticaneuecyr-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('`@fonts/helveticaneuecyr-medium.svg#helveticaneuecyr-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
 
 a{
     text-decoration: none;

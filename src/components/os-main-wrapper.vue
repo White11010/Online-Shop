@@ -39,5 +39,8 @@
         align-items: center;
         /* max-width: 900px; */
         margin: 0 auto;
+        font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 </style>

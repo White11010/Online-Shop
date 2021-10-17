@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import osCatalog from '../components/os-catalog'
-import osCart from '../components/os-cart'
+import osCatalog from '../components/catalog/os-catalog'
+import osCart from '../components/cart/os-cart'
 
 const routes = [
   {

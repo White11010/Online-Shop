@@ -2,12 +2,12 @@
     <div class="os-header">
         
         <router-link :to="{name: 'catalog'}">
-            <div class="os-header__logo">MY ONLINE SHOP</div>
+            <div class="os-header__logo">my online shop</div>
         </router-link>
         
 
         <router-link :to="{name: 'cart'}">
-            <div class="os-header__link_to_cart">CART: {{CART.length}}</div>
+            <div class="os-header__link_to_cart">CART: {{cartQuantity}}</div>
         </router-link>
     </div>
 </template>
@@ -20,7 +20,14 @@
         computed: {
             ...mapGetters([
                 'CART'
-            ])
+            ]),
+            cartQuantity() {
+                let result = 0;
+                for (let item of  this.CART) {
+                    result+=item.quantity;
+                }
+                return result;
+            }
         }
     }
 </script>
@@ -28,7 +35,7 @@
 <style lang="scss">
 
     .os-header{
-  
+        
         position: fixed;
         top: 0;
         left: 0;
@@ -44,12 +51,12 @@
         
         &__logo{
             color: #FFF;
-            font-size: 18px;
+            font-size: 21px;
             font-weight: bold;
         }   
         &__link_to_cart{
             color: #FFF;
-            font-size: 18px;
+            font-size: 21px;
 
         } 
     }
