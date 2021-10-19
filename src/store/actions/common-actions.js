@@ -10,5 +10,8 @@ export default {
     },
     INCREMENT_CART_ITEM({commit}, index) {
       commit('INCREMENT', index)
+    },
+    SAVE_CHECKED_CATEGORY({commit}, subcategory) {
+      commit('SET_CATEGORY', subcategory)
     }
 }

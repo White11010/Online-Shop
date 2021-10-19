@@ -4,5 +4,11 @@ export default {
     },
     CART(state) {
       return state.cart;
+    },
+    CATEGORIES(state) {
+      return state.categories;
+    },
+    CATEGORY(state) {
+      return state.checkedCategory;
     }
   }

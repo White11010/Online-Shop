@@ -2,27 +2,27 @@
     <div class="os-filter-menu">
         <div 
             class="os-filter-menu__categories_list"
-            v-for="filter in itemFilters"
-            :key="filter.id"    
+            v-for="category in CATEGORIES"
+            :key="category.id"    
             
         >
             <p 
                 class="os-filter-menu__categories_list_name"
-                @click="areCategoriesVisible[filter.id] = !areCategoriesVisible[filter.id]"
+                @click="areCategoriesVisible[category.id] = !areCategoriesVisible[category.id]"
             >
-                {{filter.type}}
+                {{category.type}}
             </p>
             <div 
                 class="os-filter-menu__subcategories_list"
-                v-if="areCategoriesVisible[filter.id]"
+                v-if="areCategoriesVisible[category.id]"
             >
                 <p
                     class="os-filter-menu__subcategories_list_name"                   
-                    v-for="category in filter.categories"
-                    :key="category.id"
-                    @click="selectCategory(category, filter)"
+                    v-for="subcategory in category.subcategories"
+                    :key="subcategory"
+                    @click="selectCategory(category, subcategory)"
                 >
-                    {{category.name}}
+                    {{subcategory}}
                 </p>
             </div>
 
@@ -40,14 +40,20 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
+
     export default {
         name: "os-filter-menu",
         data() {
             return {
                 
                 areCategoriesVisible: [],
-                number: ''
             }
+        },
+        computed: {
+            ...mapGetters([
+                'CATEGORIES'
+            ])
         },
         props: {
             itemFilters: {
@@ -64,9 +70,12 @@
             }
         },
         methods: {
-            selectCategory(category, filter) {
-                this.$emit('select', category, filter)
-                this.areCategoriesVisible[filter.id] = false;
+            ...mapActions([
+
+            ]),
+            selectCategory(category, subcategory) {
+                this.$emit('select', subcategory)
+                this.areCategoriesVisible[category.id] = false;
             },
             hideSelect() {
                 for (let i = 0; i<this.areCategoriesVisible.length; i++) { 
@@ -92,6 +101,7 @@
         position: fixed;
         top: 60px;
         height: 43px;
+        margin: 0 0;
 
         display: flex;
         align-items: flex-start;

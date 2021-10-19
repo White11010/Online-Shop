@@ -1,7 +1,8 @@
 <template>
     <div class="os-catalog"> 
         <os-filter-menu
-            :itemFilters="itemFilters"  
+            :itemFilters="itemFilters"
+            @select="sortByCategories"  
         />
         <os-catalog-item
             v-for="product in PRODUCTS"
@@ -24,30 +25,27 @@
             osCatalogItem,
             osFilterMenu
         },
-        data() {
-            return {
-                itemFilters: [
-                    {type: 'clothes', categories: [{name: 'T-shirt', id: 1}, {name: 'Hoodie', id: 2}, { name: 'Longsleeve', id: 3}], id: 1},
-                    {type: 'accessories', categories: [{ name: 'Jewelery', id: 1}, { name: 'Bags', id: 2}], id: 2}
-                ],
-            }
-        },
         computed: {
             ...mapGetters([
                 'PRODUCTS',
-                'CART'
+                'CART',
+                'CATEGORY'
             ]),
-
         },
         methods: {
             ...mapActions([
                 'GET_PRODUCTS_FROM_API',
-                'ADD_TO_CART'
+                'ADD_TO_CART',
+                'SAVE_CHECKED_CATEGORY'
             ]),
             addToCart(data) {
                 this.ADD_TO_CART(data)
-            }
-        },
+            },
+            sortByCategories(subcategory) {
+                this.SAVE_CHECKED_CATEGORY(subcategory);
+                this.GET_PRODUCTS_FROM_API();
+             },
+        },     
         mounted() {
             this.GET_PRODUCTS_FROM_API()  
         }
@@ -57,6 +55,7 @@
 
 <style>
     .os-catalog{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: start;

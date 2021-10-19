@@ -11,7 +11,9 @@ const actions = {...commonActions, ...apiActions}
 export default createStore({
   state: {
     products: [],
-    cart: []
+    categories: [],
+    checkedCategory: '',
+    cart: [],
   },
   mutations,
   actions,
