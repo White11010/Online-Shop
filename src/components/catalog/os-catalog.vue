@@ -1,7 +1,7 @@
 <template>
     <div class="os-catalog"> 
         <os-filter-menu
-            :itemFilters="itemFilters"
+            :itemFilters="itemFilters"  
         />
         <os-catalog-item
             v-for="product in PRODUCTS"
