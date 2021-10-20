@@ -3,7 +3,7 @@
     {
       "image": "1.jpg",
       "name": "T-shirt 1",
-      "price": 2100,
+      "price": 50,
       "article": "T1",
       "category": "T-shirt",
       "type": "Clothes",
@@ -12,7 +12,7 @@
     {
       "image": "2.jpg",
       "name": "Bag 1",
-      "price": 315,
+      "price": 120,
       "article": "B1",
       "category": "Bags",
       "type": "Accessories",
@@ -30,7 +30,7 @@
     {
       "image": "4.jpg",
       "name": "Hoodie 1",
-      "price": 53,
+      "price": 70,
       "article": "H1",
       "category": "Hoodie",
       "type": "Clothes",
@@ -39,7 +39,7 @@
     {
       "image": "5.jpg",
       "name": "T-shirt 2",
-      "price": 65,
+      "price": 25,
       "article": "T2",
       "category": "T-shirt",
       "type": "Clothes",
@@ -48,7 +48,7 @@
     {
       "image": "6.jpg",
       "name": "Jewelery 1",
-      "price": 87,
+      "price": 200,
       "article": "J1",
       "category": "Jewelery",
       "type": "Accessories",
@@ -57,7 +57,7 @@
     {
       "image": "7.jpg",
       "name": "T-shirt 3",
-      "price": 2100,
+      "price": 30,
       "article": "T3",
       "category": "T-shirt",
       "type": "Clothes",
@@ -75,7 +75,7 @@
     {
       "image": "9.jpg",
       "name": "Hoodie 2",
-      "price": 100,
+      "price": 90,
       "article": "H2",
       "category": "Hoodie",
       "type": "Clothes",
@@ -84,7 +84,7 @@
     {
       "image": "10.jpg",
       "name": "Jewelery 3",
-      "price": 53,
+      "price": 190,
       "article": "J3",
       "category": "Jewelery",
       "type": "Accessories",
@@ -102,7 +102,7 @@
     {
       "image": "12.jpg",
       "name": "Longsleeve 1",
-      "price": 100,
+      "price": 45,
       "article": "L1",
       "category": "Longsleeve",
       "type": "Clothes",
@@ -111,7 +111,7 @@
     {
       "image": "13.jpg",
       "name": "Longsleeve 2",
-      "price": 53,
+      "price": 50,
       "article": "L2",
       "category": "Longsleeve",
       "type": "Clothes",

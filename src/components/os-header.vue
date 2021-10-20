@@ -1,7 +1,7 @@
 <template>
   <div class="os-header">
     <router-link :to="{ name: 'catalog' }">
-      <div class="os-header__logo">my online shop</div>
+      <div class="os-header__logo" @click="clearFilters">my online shop</div>
     </router-link>
 
     <router-link :to="{ name: 'cart' }">
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "os-header",
@@ -25,6 +25,18 @@ export default {
       return result;
     },
   },
+  methods: {
+    ...mapActions([
+      "SAVE_CHECKED_CATEGORY",
+      "GET_PRODUCTS_FROM_API",
+    ]),
+    clearFilters() {
+      if (this.$route.path == '/') {
+      this.SAVE_CHECKED_CATEGORY('');
+      this.GET_PRODUCTS_FROM_API();
+      }
+    }
+  }
 };
 </script>
 

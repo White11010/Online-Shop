@@ -7,7 +7,7 @@
     />
     <div class="os-catalog-item__info">
       <p class="os-catalog-item__name">{{ product_data.name }}</p>
-      <p class="os-catalog-item__price">Price: {{ product_data.price }} $</p>
+      <p class="os-catalog-item__price">{{ product_data.price }} $</p>
       <button class="os-catalog-item__add_to_cart_btn btn" @click="addToCart">
         ADD TO CART
       </button>
