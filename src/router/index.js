@@ -1,20 +1,20 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import osCatalog from '../components/catalog/os-catalog'
-import osCart from '../components/cart/os-cart'
+import osCatalog from "../components/catalog/os-catalog";
+import osCart from "../components/cart/os-cart";
 
 const routes = [
   {
-    path: '/',
-    name: 'catalog',
-    component: osCatalog
+    path: "/",
+    name: "catalog",
+    component: osCatalog,
   },
   {
-    path: '/cart',
-    name: 'cart',
+    path: "/cart",
+    name: "cart",
     component: osCart,
-    props: true
-  }
+    props: true,
+  },
 ];
 
 const router = createRouter({

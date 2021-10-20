@@ -1,22 +1,18 @@
 <template>
   <div id="app">
-    <os-main-wrapper/>
+    <os-main-wrapper />
   </div>
 </template>
 
 <script>
-import OsMainWrapper from './components/os-main-wrapper.vue'
-
+import OsMainWrapper from "./components/os-main-wrapper.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    OsMainWrapper
-
-  }
-}
+    OsMainWrapper,
+  },
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
