@@ -48,7 +48,6 @@ export default {
   width: 25%;
   height: 25%;
 
-  
   &__info {
     width: 100%;
     display: flex;
@@ -56,32 +55,29 @@ export default {
     justify-content: space-between;
     align-items: flex-start;
 
-    & > *{
+    & > * {
       margin-top: 1vw;
       font-weight: 700;
     }
-
   }
-    
-   
+
   &__pic {
     height: 100%;
     width: 100%;
     object-fit: contain;
   }
 
-  &__name{
+  &__name {
     font-size: 15px;
   }
 
-  &__price{
+  &__price {
     font-size: 13px;
   }
 
-  &__add_to_cart_btn{
+  &__add_to_cart_btn {
     width: 120px;
     height: 40px;
   }
 }
-
 </style>

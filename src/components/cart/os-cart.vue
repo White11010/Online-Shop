@@ -1,16 +1,23 @@
 <template>
   <div class="os-cart">
-    <os-cart-item
-      v-for="(item, index) in CART"
-      :key="item.article"
-      :cart_item_data="item"
-      @deleteFromCart="deleteFromCart(index)"
-      @decrement="decrement(index)"
-      @increment="increment(index)"
-    />
-    <div class="os-cart__total">
-      <p>Price:</p>
-      <p>{{ cartTotalCost }}</p>
+    <div class="os-cart__wrapper">
+      <div class="os-cart__items_list">
+        <os-cart-item
+          v-for="(item, index) in CART"
+          :key="item.article"
+          :cart_item_data="item"
+          @deleteFromCart="deleteFromCart(index)"
+          @decrement="decrement(index)"
+          @increment="increment(index)"
+        />
+      </div>
+
+      <div class="os-cart__total" v-if="cartTotalCost != 0">
+        <p>Total price: {{ cartTotalCost }}</p>
+      </div>
+      <div class="os-cart__empty_title" v-else>
+        <p>Cart is empty</p>
+      </div>
     </div>
   </div>
 </template>
@@ -31,13 +38,6 @@ export default {
       for (let item of this.CART) {
         result += item.price * item.quantity;
       }
-      // let result = []
-      // for (let item of  this.CART) {
-      //    result.push(item.price*item.quantity);
-      // }
-      // result = result.reduce(function (sum, el) {
-      //     return sum + el;
-      // })
       return result;
     },
   },
@@ -65,5 +65,28 @@ export default {
 .os-cart {
   width: 100%;
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.os-cart__wrapper {
+  height: 100%;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.os-cart__total {
+  width: 25%;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.os-cart__empty_title {
+  /*     
+     display: block;
+    margin-left: auto;
+    margin-right: auto; */
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 30px;
 }
 </style>

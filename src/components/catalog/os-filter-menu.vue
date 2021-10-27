@@ -27,10 +27,6 @@
         </p>
       </div>
     </div>
-
-    <div v-for="category in itemFilters.categories" :key="category.id">
-      Name: {{ category.name }}
-    </div>
   </div>
 </template>
 
@@ -108,9 +104,22 @@ export default {
     display: flex;
     align-items: center;
 
+    &__name {
+      position: relative;
+    }
     &_name:hover {
       cursor: pointer;
       color: rgb(107, 107, 107);
+    }
+    &_name::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
     }
   }
 
@@ -128,6 +137,16 @@ export default {
     &_name {
       margin-top: 8px;
       margin-bottom: 8px;
+    }
+    &_name::after {
+      position: absolute;
+      top: 0;
+      right: -3px;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
     }
     &_name:hover {
       color: rgb(107, 107, 107);

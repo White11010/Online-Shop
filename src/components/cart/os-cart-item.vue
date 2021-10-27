@@ -1,14 +1,13 @@
 <template>
   <div class="os-cart-item">
     <img
-      class="os-catalog-item__pic"
+      class="os-cart-item__pic"
       :src="require('../../assets/images/' + cart_item_data.image)"
       alt="img"
     />
     <div class="os-cart-item__info">
       <p>{{ cart_item_data.name }}</p>
       <p>{{ cart_item_data.price }}</p>
-      <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="os-cart-item__quantity">
       <p>Quantity:</p>
@@ -18,7 +17,7 @@
         <span class="os-cart-item__quantity_btn" @click="incrementItem">+</span>
       </span>
     </div>
-    <button @click="deleteFromCart">Delete</button>
+    <button class="btn" @click="deleteFromCart">DELETE</button>
   </div>
 </template>
 
@@ -53,7 +52,19 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-top: 20px;
+  &__pic {
+    width: 25%;
+  }
+  &__info {
+    margin-left: 20px;
+    width: 25%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   &__quantity {
     &_btn {
       cursor: pointer;

@@ -1,11 +1,13 @@
 <template>
   <div class="os-header">
     <router-link :to="{ name: 'catalog' }">
-      <div class="os-header__logo" @click="clearFilters">my online shop</div>
+      <div class="os-header__logo link" @click="clearFilters">
+        my online shop
+      </div>
     </router-link>
 
     <router-link :to="{ name: 'cart' }">
-      <div class="os-header__link_to_cart">CART: {{ cartQuantity }}</div>
+      <div class="os-header__link_to_cart link">CART: {{ cartQuantity }}</div>
     </router-link>
   </div>
 </template>
@@ -26,17 +28,14 @@ export default {
     },
   },
   methods: {
-    ...mapActions([
-      "SAVE_CHECKED_CATEGORY",
-      "GET_PRODUCTS_FROM_API",
-    ]),
+    ...mapActions(["SAVE_CHECKED_CATEGORY", "GET_PRODUCTS_FROM_API"]),
     clearFilters() {
-      if (this.$route.path == '/') {
-      this.SAVE_CHECKED_CATEGORY('');
-      this.GET_PRODUCTS_FROM_API();
+      if (this.$route.path == "/") {
+        this.SAVE_CHECKED_CATEGORY("");
+        this.GET_PRODUCTS_FROM_API();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
