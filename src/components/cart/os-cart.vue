@@ -64,21 +64,22 @@ export default {
 <style>
 .os-cart {
   width: 100%;
-  margin-top: 60px;
+  margin-top:  3.75em;
   display: flex;
   justify-content: center;
 }
 .os-cart__wrapper {
   height: 100%;
-  width: 1000px;
+  width: min(1000px, 100%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 0 1rem;
 }
 .os-cart__total {
   width: 25%;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: 1.25rem;
+  margin-top: 3rem;
 }
 .os-cart__empty_title {
   /*     

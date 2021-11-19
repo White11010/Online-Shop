@@ -52,7 +52,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   &__pic {
     width: 25%;
   }

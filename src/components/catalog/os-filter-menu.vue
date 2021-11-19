@@ -85,8 +85,8 @@ export default {
 .os-filter-menu {
   width: 100%;
   position: fixed;
-  top: 60px;
-  height: 43px;
+  top: 3.75rem;
+  height: 2.6875em;
   margin: 0 0;
 
   display: flex;
@@ -95,39 +95,29 @@ export default {
   background-color: white;
 
   &__categories_list {
-    width: 150px;
-    margin-right: 75px;
-    margin-left: 75px;
+    width: 16rem;
     box-sizing: border-box;
     position: relative;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    &__name {
+    &_name {
       position: relative;
+      font-size: 1em;
     }
     &_name:hover {
       cursor: pointer;
       color: rgb(107, 107, 107);
     }
-    &_name::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-top: 100px solid red;
-    }
   }
 
   &__subcategories_list {
     position: absolute;
-    top: 24px;
-    left: -10px;
-    width: 150px;
+    top: 1.5rem;
+    left: 0;
+    width: min(16rem, 50vw);
     background-color: white;
     border: 1px solid black;
     padding: 10px;
@@ -135,18 +125,7 @@ export default {
     color: black;
 
     &_name {
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-    &_name::after {
-      position: absolute;
-      top: 0;
-      right: -3px;
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-top: 100px solid red;
+      margin: .5rem 0;
     }
     &_name:hover {
       color: rgb(107, 107, 107);
@@ -154,4 +133,10 @@ export default {
     }
   }
 }
+@media screen and (max-width: 576px) {
+	.os-filter-menu__categories_list_name{
+		font-size: 1.1em;
+	}
+}
+
 </style>

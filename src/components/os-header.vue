@@ -44,9 +44,9 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 18px 30px;
+  padding: 1.125em 1.875em;
   width: 100%;
-  min-height: 60px;
+  height: 3.75em;
   box-sizing: border-box;
   background-color: black;
   display: flex;
@@ -55,12 +55,12 @@ export default {
 
   &__logo {
     color: #fff;
-    font-size: 21px;
+    font-size: 1.3125rem;
     font-weight: bold;
   }
   &__link_to_cart {
     color: #fff;
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
 }
 </style>

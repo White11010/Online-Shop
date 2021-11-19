@@ -43,10 +43,10 @@ export default {
   flex: 0 auto;
   box-shadow: 0 0 8px 0 #8a8a8a00;
   margin: 0;
-  padding: 4vw 1.5vw 0;
+  padding: 2.6875em 1.5vw 0;
   box-sizing: border-box;
-  width: 25%;
-  height: 25%;
+  width: 100%;
+  height: 100%;
 
   &__info {
     width: 100%;
@@ -76,8 +76,9 @@ export default {
   }
 
   &__add_to_cart_btn {
-    width: 120px;
-    height: 40px;
+    font-size: .9rem;
+    width: 7.5rem;
+    height: 2.5rem;
   }
 }
 </style>

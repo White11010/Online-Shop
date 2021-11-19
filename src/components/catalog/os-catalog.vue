@@ -1,12 +1,14 @@
 <template>
   <div class="os-catalog">
     <os-filter-menu :itemFilters="itemFilters" @select="sortByCategories" />
-    <os-catalog-item
-      v-for="product in PRODUCTS"
-      :key="product.article"
-      :product_data="product"
-      @addToCart="addToCart"
-    />
+    <div class="os-catalog__grid">
+      <os-catalog-item
+        v-for="product in PRODUCTS"
+        :key="product.article"
+        :product_data="product"
+        @addToCart="addToCart"
+      />
+    </div>
   </div>
 </template>
 
@@ -50,7 +52,18 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 60px;
-  padding-bottom: 50px;
+  margin-top:  3.75em;
+  padding-bottom: 3em;
+
+  &__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: 992px) {
+	.os-catalog__grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
 }
 </style>

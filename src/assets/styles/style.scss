@@ -39,3 +39,42 @@ a{
 .link:hover::after{
 	width: 100%
 }
+
+/*Media queries*/
+@media screen and (max-width: 1440px) {
+	html {
+		font-size: .9rem;
+	}	
+}
+// @media screen and (max-width: 1200px) {
+// 	html {
+// 		font-size: .8rem;
+// 	}
+// }
+@media screen and (max-width: 992px) {
+	html {
+		font-size: .8rem;
+	}
+}
+// @media screen and (max-width: 768px) {
+// 	html {
+// 		font-size: .6rem;
+// 	}
+// }
+@media screen and (max-width: 576px) {
+	html {
+		font-size: .7rem;
+	}
+	// .os-filter-menu__categories_list_name{
+	// 	font-size: 1.5em;
+	// }
+}
+
+
+
+
+
+
+
+
+
