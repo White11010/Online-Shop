@@ -5,19 +5,21 @@
       :src="require('../../assets/images/' + cart_item_data.image)"
       alt="img"
     />
-    <div class="os-cart-item__info">
+    <div class="os-cart-item__info info">
       <p>{{ cart_item_data.name }}</p>
-      <p>{{ cart_item_data.price }}</p>
+      <p class="info__price">{{ cart_item_data.price }}</p>
     </div>
-    <div class="os-cart-item__quantity">
+    <div class="os-cart-item__quantity quantity">
       <p>Quantity:</p>
-      <span>
-        <span class="os-cart-item__quantity_btn" @click="decrementItem">-</span>
+      <div class="quantity__value">
+        <span class="quantity__button" @click="decrementItem">-</span>
         {{ cart_item_data.quantity }}
-        <span class="os-cart-item__quantity_btn" @click="incrementItem">+</span>
-      </span>
+        <span class="quantity__button" @click="incrementItem">+</span>
+      </div>
     </div>
-    <button class="btn" @click="deleteFromCart">DELETE</button>
+    <button class="os-cart-item__button btn" @click="deleteFromCart">
+      DELETE
+    </button>
   </div>
 </template>
 
@@ -56,19 +58,37 @@ export default {
   &__pic {
     width: 25%;
   }
-  &__info {
-    margin-left: 20px;
-    width: 25%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  &__button {
+    font-size: 1rem;
+    width: 5em;
   }
-  &__quantity {
-    &_btn {
-      cursor: pointer;
-    }
+}
+.info {
+  width: 25%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 1rem;
+  box-sizing: border-box;
+
+  &__price {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+.quantity {
+  width: 25%;
+
+  &__value {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &__button {
+    cursor: pointer;
   }
 }
 </style>

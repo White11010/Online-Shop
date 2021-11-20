@@ -1,12 +1,12 @@
 <template>
   <div class="os-filter-menu">
     <div
-      class="os-filter-menu__categories_list"
+      class="os-filter-menu__categories"
       v-for="category in CATEGORIES"
       :key="category.id"
     >
       <p
-        class="os-filter-menu__categories_list_name"
+        class="os-filter-menu__categories-name"
         @click="
           areCategoriesVisible[category.id] = !areCategoriesVisible[category.id]
         "
@@ -14,11 +14,11 @@
         {{ category.type }}
       </p>
       <div
-        class="os-filter-menu__subcategories_list"
+        class="os-filter-menu__subcategories"
         v-if="areCategoriesVisible[category.id]"
       >
         <p
-          class="os-filter-menu__subcategories_list_name"
+          class="os-filter-menu__subcategories-name"
           v-for="subcategory in category.subcategories"
           :key="subcategory"
           @click="selectCategory(category, subcategory)"
@@ -94,7 +94,7 @@ export default {
   justify-content: center;
   background-color: white;
 
-  &__categories_list {
+  &__categories {
     width: 16rem;
     box-sizing: border-box;
     position: relative;
@@ -103,17 +103,17 @@ export default {
     align-items: center;
     justify-content: center;
 
-    &_name {
+    &-name {
       position: relative;
       font-size: 1em;
     }
-    &_name:hover {
+    &-name:hover {
       cursor: pointer;
       color: rgb(107, 107, 107);
     }
   }
 
-  &__subcategories_list {
+  &__subcategories {
     position: absolute;
     top: 1.5rem;
     left: 0;
@@ -124,19 +124,18 @@ export default {
     box-sizing: border-box;
     color: black;
 
-    &_name {
-      margin: .5rem 0;
+    &-name {
+      margin: 0.5rem 0;
     }
-    &_name:hover {
+    &-name:hover {
       color: rgb(107, 107, 107);
       cursor: pointer;
     }
   }
 }
 @media screen and (max-width: 576px) {
-	.os-filter-menu__categories_list_name{
-		font-size: 1.1em;
-	}
+  .os-filter-menu__categories-name {
+    font-size: 1.1em;
+  }
 }
-
 </style>

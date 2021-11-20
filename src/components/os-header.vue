@@ -7,7 +7,7 @@
     </router-link>
 
     <router-link :to="{ name: 'cart' }">
-      <div class="os-header__link_to_cart link">CART: {{ cartQuantity }}</div>
+      <div class="os-header__cart link">CART: {{ cartQuantity }}</div>
     </router-link>
   </div>
 </template>
@@ -58,7 +58,7 @@ export default {
     font-size: 1.3125rem;
     font-weight: bold;
   }
-  &__link_to_cart {
+  &__cart {
     color: #fff;
     font-size: 1.3125rem;
   }

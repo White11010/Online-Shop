@@ -1,7 +1,7 @@
 <template>
   <div class="os-cart">
     <div class="os-cart__wrapper">
-      <div class="os-cart__items_list">
+      <div class="os-cart__items">
         <os-cart-item
           v-for="(item, index) in CART"
           :key="item.article"
@@ -15,7 +15,7 @@
       <div class="os-cart__total" v-if="cartTotalCost != 0">
         <p>Total price: {{ cartTotalCost }}</p>
       </div>
-      <div class="os-cart__empty_title" v-else>
+      <div class="os-cart__empty" v-else>
         <p>Cart is empty</p>
       </div>
     </div>
@@ -64,7 +64,7 @@ export default {
 <style>
 .os-cart {
   width: 100%;
-  margin-top:  3.75em;
+  margin-top: 3.75em;
   display: flex;
   justify-content: center;
 }
@@ -74,18 +74,20 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .os-cart__total {
-  width: 25%;
-  margin-left: 1.25rem;
-  margin-top: 3rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
 }
-.os-cart__empty_title {
-  /*     
-     display: block;
-    margin-left: auto;
-    margin-right: auto; */
+.os-cart__empty {
   margin-top: 100px;
   font-weight: 700;
   font-size: 30px;

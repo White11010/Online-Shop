@@ -8,7 +8,7 @@
     <div class="os-catalog-item__info">
       <p class="os-catalog-item__name">{{ product_data.name }}</p>
       <p class="os-catalog-item__price">{{ product_data.price }} $</p>
-      <button class="os-catalog-item__add_to_cart_btn btn" @click="addToCart">
+      <button class="os-catalog-item__button btn" @click="addToCart">
         ADD TO CART
       </button>
     </div>
@@ -75,8 +75,8 @@ export default {
     font-size: 13px;
   }
 
-  &__add_to_cart_btn {
-    font-size: .9rem;
+  &__button {
+    font-size: 0.9rem;
     width: 7.5rem;
     height: 2.5rem;
   }

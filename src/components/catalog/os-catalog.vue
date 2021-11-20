@@ -52,18 +52,18 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top:  3.75em;
+  margin-top: 3.75em;
   padding-bottom: 3em;
 
-  &__grid{
+  &__grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-  @media screen and (max-width: 992px) {
-	.os-catalog__grid{
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
+  @media screen and (max-width: 774px) {
+    .os-catalog__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 </style>
